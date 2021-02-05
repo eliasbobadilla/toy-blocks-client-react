@@ -9,7 +9,8 @@ import Node from "../components/Node";
 
 describe("<Nodes />", () => {
   const actions = {
-    checkNodeStatuses: jest.fn()
+    checkNodeStatuses: jest.fn(),
+    fetchNodeBlocks: jest.fn()
   };
 
   const nodes = {

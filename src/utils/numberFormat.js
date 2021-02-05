@@ -51,3 +51,7 @@ export function isInt(n) {
 export function scrubFormatting(value) {
   return value.toString().replace('$', '').replace(',', '').replace('.', '');
 }
+
+export function formatNumberWithZeros(num, places) {
+  return num.toString().padStart(places, "0");
+}

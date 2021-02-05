@@ -1,4 +1,4 @@
-import {getCurrencyFormattedNumber, isInt, scrubFormatting, getFormattedNumber} from './numberFormat';
+import {getCurrencyFormattedNumber, isInt, scrubFormatting, getFormattedNumber, formatNumberWithZeros} from './numberFormat';
 
 describe('Number Formatter', () => {
   describe('getCurrencyFormattedNumber', () => {
@@ -36,4 +36,11 @@ describe('Number Formatter', () => {
       expect(getFormattedNumber('')).toEqual('');
     });
   });
+
+  describe('formatNumberWithZeros', () => {
+    it('returns 001 if passed 1, 3', () => {
+      expect(formatNumberWithZeros(1, 3)).toEqual('001');
+    });
+  });
+
 });
